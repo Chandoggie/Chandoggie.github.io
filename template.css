@@ -52,6 +52,65 @@ header {
     background-color: rgb(112, 112, 112);
 }
 
+/* Enabled Hits */
+.hitdivenabled {
+    height: 25px;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(36, 128, 0);
+}
+
+.enabletext {
+    color: rgb(137, 175, 0);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.enabletext:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(137, 175, 0);
+}
+
+/* Disabled Hits */
+
+.hitdivdisabled {
+    height: 25px;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(180, 0, 0);
+}
+
+.disabletext {
+    color: rgb(245, 92, 87);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.disabletext:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(245, 92, 87);
+}
+
+.headerinp {
+    color: rgb(64, 162, 245);
+}
+
 li a {
     display: block;
     width: auto;
@@ -68,6 +127,25 @@ li a {
 .borderradiusleft {
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
+}
+
+.smptext {
+    color: rgb(249, 190, 35);
+    width: 205px;
+    background-color: rgb(51, 51, 51);
+    margin: auto;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.smpheaderdiv {
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(112, 112, 112);
 }
 
 /* Twitter */
@@ -126,6 +204,24 @@ li a {
 }
 
 .urlhypixel:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(249, 190, 35);
+}
+
+/* Hit System */
+.urlhit {
+    font-size: 18px;
+    color: rgb(249, 190, 35);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.urlhit:hover {
     color: rgb(51, 51, 51);
     background-color: rgb(249, 190, 35);
 }
