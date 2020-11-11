@@ -51,6 +51,60 @@ header {
     overflow: hidden;
     background-color: rgb(112, 112, 112);
 }
+/* Twitch Widget Stuff */
+
+.twitchwidget {
+    height: auto;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(145, 70, 255);
+}
+
+.twitchtext {
+    color: rgb(145, 70, 255);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: auto;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.twitchtext:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(161, 133, 209);
+}
+
+/* Discord Widget Stuff */
+.discordwidget {
+    height: 25px;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(114, 137, 218);
+}
+
+.discordtext {
+    color: rgb(114, 137, 218);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.discordtext:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(114, 137, 218);
+}
 
 /* Enabled Hits */
 .hitdivenabled {
@@ -135,8 +189,40 @@ header {
     background-color: rgb(52, 208, 219);
 }
 
+/* Housing Stuff */
+
+.housingcomp {
+    height: 25px;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(168, 0, 168);
+}
+
+.housingcomptext {
+    color: rgb(252, 84, 252);
+    transition-duration: 0.3s;
+    width:  205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.housingcomptext:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(252, 84, 252);
+}
+
 .headerinp {
     color: rgb(64, 162, 245);
+}
+
+.headerhousing {
+    color: rgb(252, 84, 252);
 }
 
 li a {
@@ -174,6 +260,15 @@ li a {
     border-radius: 7px;
     overflow: hidden;
     background-color: rgb(112, 112, 112);
+}
+
+.housingurl {
+    color: rgb(249, 190, 35);
+    transition-duration: 0.3s;
+}
+
+.housingurl:hover {
+    color:  rgb(252, 84, 252);
 }
 
 /* Twitter */
