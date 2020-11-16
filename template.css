@@ -398,6 +398,14 @@ header {
     background-color: rgb(249, 190, 35);
 }
 
+li a {
+    display: block;
+    width: auto;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
 /* Left */
 .specspage {
     color: rgb(249, 190, 35);
