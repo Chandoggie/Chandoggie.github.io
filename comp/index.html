@@ -1,169 +1,115 @@
 <!DOCTYPE HTML>
-
 <html lang="en">
-	<head>
-        <title>Chan's Building Contest</title>
-        
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="/template.css">
-        
-        <meta charset="UTF-8">
-        <meta name="description" content="Chandoggie's Personal Website">
-        <meta name="keywords" content="minecraft, chandoggie, hypixel">
-        <meta name="author" content="Chandoggie">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta property="og:title" content="Chandoggie's Personal Website" />
-        <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
-        <meta property="og:image:width" content="192" />
-        <meta property="og:image:height" content="192" />
-        
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@chandoggie" />
-        <meta name="twitter:creator" content="@chandoggie" />
-        <meta property="og:url" content="https://chan.dog" />
-        <meta property="og:title" content="Chandoggie's Personal Website" />
-        <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
-        <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $.getJSON('/contestants.json', function(jd) {
-                    $.each(jd.names, function(i, f) {
-                        //alert(jd.names[i]);
-                        if (jd.names[i].uuid == 0) {
-                            var image = '/images/filler/contestant' + i + '.png';
-                        } else {
-                            var image = 'https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=200&overlay';
-                        }
-                        
-                        if (jd.names[i].name == 0 && jd.names[i].sub == true) {
-                            var namevar = '<b class="colorred">[SUB SPOT]</b>';
-                        } else if (jd.names[i].sub == false && jd.names[i].name == 0) {
-                            var namevar = '<b class="colorlime">[OPEN]</b>';
-                        } else {
-                            var namevar = '';
-                        }
-                        
-                        if (jd.names[i].sub == true && !jd.names[i].last == true) {
-                           $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '"><img src="' + image + '" class="imagewithradius contestant17"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>'); 
-                        } else if (jd.names[i].last == true) {
-                           $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '"><img src="' + image + '" class="imagewithradius contestant8"></a><p class="borderr specspage opentagbottom">' + namevar + '<br><br><a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>'); 
-                        } else {
-                           $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '"><img src="' + image + '" class="imagewithradius contestant17"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>');
-                        }
-                    });
+   <head>
+    <title>Chan's Building Contest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/template.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Chandoggie's Personal Website">
+    <meta name="keywords" content="minecraft, chandoggie, hypixel">
+    <meta name="author" content="Chandoggie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Chandoggie's Personal Website" />
+    <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@chandoggie" />
+    <meta name="twitter:creator" content="@chandoggie" />
+    <meta property="og:url" content="https://chan.dog" />
+    <meta property="og:title" content="Chandoggie's Personal Website" />
+    <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
+    <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            $.getJSON('/winners.json', function(winjd) {
+                $.each(winjd.winners, function(i, f) {
+                    $('#prevwinners').append('<p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p>');
+                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p>');
+                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p>');
+                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p>');
                 });
             });
-        </script>
-        
-    </head>
-    <main>
-        <body>
-            <div style="height: auto;" class="smpheaderdiv">
-                <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Chan's Building Contest Explanation:</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">Hello everyone! I am hosting weekly housing build competitions live on Twitch every Friday!<br><br>Viewers of the stream will be able to visit my housing using '<span class="colorred">/visit Chandoggie</span>' in a housing lobby.<br><br>Each round, viewers will be able to vote off a builder using a poll in Twitch chat.<br><br>Below you will find a list of contestant who are participating! You'll also find a list of previous winners!<br><br>If you'd like to build and try your hand at winning, check out the <span class="colorpink">"How to Apply"</span> section to fill an <span class="colorlime">[OPEN]</span> slot!<br><span class="colorred">[SUB SPOT]</span>'s are only available to  Twitch subscribers!</p>
-            </div>
-            <br>
-            <div class="twitchwidget">
-                <a href="https://twitch.tv/Chandoggie" class="twitchtext borderr" style="font-size: 15px;">Watch The Competition!<br> Live at Twitch.tv/Chandoggie</a>
-            </div>
-            <br><br>
-            <div name="contestants" id="contestants" style="height: auto;" class="smpheaderdiv">
-                <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Meet the Contestants:</span>
-                <p style="margin-top: 5px; margin-bottom: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">
-                Here are the contestants for our next contest on:<br><a href="https://twitch.tv/Chandoggie" style="color: rgb(145, 70, 255);">Nov. 20th at 7PM EST<br>https://twitch.tv/Chandoggie</a><br><br>This list will be updated during &amp; after the event to reflect a contestants position.<br><br>Usernames &amp; Faces link to <span class="colorred">plancke.io</span>.<br><br>Check out the <span style="color: rgb(252, 84, 252);">"How to Apply"</span> section if you'd like to participate and fill an <span style="color: rgb(85, 255, 85);">[OPEN]</span> slot!</p>
-                <!-- Stuff Gets Filled In Here From JSON Script -->
-            </div>
             
-            <br><br>
+            $.getJSON('/nextcontest.json', function(ncjd) {
+                $('#nextcontest').prepend(ncjd.next);
+            });
             
-            <div name="winners" id="winners" style="height: auto;" class="smpheaderdiv">
-                <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Previous Winners!</span>
-                <!-- START DATE -->
-                <p style="margin-top: 20px; margin-bottom: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px; font-weight: 600;" class="smptext borderr">
-                <a href="https://www.twitch.tv/videos/792203037" style="color: rgb(161, 133, 209);">Week 1 [Nov. 4th]<br></a></p>
-                
-                <!-- START -->
-                <!-- Contestant 1 -->
-                <a href="https://plancke.io/hypixel/player/stats/_Sunet_">
-                    <img src="/images/winners/sunet.png" class="imagewithradius" style="margin-bottom: 5px; margin-top: auto; float: right">
-                </a>
-                <p class="borderr specspage opentag"><b style="color: rgb(251, 228, 132);">[1st Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/_Sunet_" class="housingurl">_Sunet_</a></p>
-                
-                <!-- Contestant 2 -->
-                <a href="https://plancke.io/hypixel/player/stats/chpn">
-                     <img src="/images/winners/chpn.png" class="imagewithradius" style="margin-bottom: 5px; margin-top: auto; float: right">
-                </a>
-                <p class="borderr specspage opentag"><b style="color: rgb(214, 213, 221);">[2nd Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/chpn" class="housingurl">chpn</a></p>
-                
-                <!-- Contestant 3 -->
-                <a href="https://plancke.io/hypixel/player/stats/CaptainCookie886">
-                    <img src="/images/winners/captaincookie886.png" class="imagewithradius" style="margin: auto; float: right">
-                </a>
-                <p class="borderr specspage" style="margin: auto; float: left;"><b style="color: rgb(175, 126, 109);">[3rd Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/CaptainCookie886" class="housingurl" style="font-size: 13px;">CaptainCookie886</a></p>
-                <!-- END -->
-                <br>
-                <!-- START DATE -->
-                <p style="margin-top: 20px; margin-bottom: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px; font-weight: 600;" class="smptext borderr">
-                <a href="https://www.twitch.tv/videos/802089702" style="color: rgb(161, 133, 209);">Week 2 [Nov. 13th]<br></a></p>
-                
-                <!-- START -->
-                <!-- Contestant 1 -->
-                <a href="https://plancke.io/hypixel/player/stats/ZakGotMc">
-                    <img src="/images/winners/zakgotmc.png" class="imagewithradius" style="margin-bottom: 5px; margin-top: auto; float: right">
-                </a>
-                <p class="borderr specspage opentag"><b style="color: rgb(251, 228, 132);">[1st Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/ZakGotMc" class="housingurl">ZakGotMc</a></p>
-                
-                <!-- Contestant 2 -->
-                <a href="https://plancke.io/hypixel/player/stats/Cooperh415">
-                     <img src="/images/winners/cooperh415.png" class="imagewithradius" style="margin-bottom: 5px; margin-top: auto; float: right">
-                </a>
-                <p class="borderr specspage opentag"><b style="color: rgb(214, 213, 221);">[2nd Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/Cooperh415" class="housingurl">Cooperh415</a></p>
-                
-                <!-- Contestant 3 -->
-                <a href="https://plancke.io/hypixel/player/stats/Ryanator21">
-                    <img src="/images/winners/ryanator21.png" class="imagewithradius" style="margin: auto; float: right">
-                </a>
-                <p class="borderr specspage" style="margin: auto; float: left;"><b style="color: rgb(175, 126, 109);">[3rd Place]</b><br><br>
-                
-                <a href="https://plancke.io/hypixel/player/stats/Ryanator21" class="housingurl">Ryanator21</a></p>
-                <!-- END -->
-            </div>
-            
-            <br><br>
-            
-            <div name="apply" id="apply" style="height: auto;" class="smpheaderdiv">
-                <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">How To Apply:</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">If you'd like to build in the contest, let me know your IGN in the '<span style="color: rgb(114, 137, 218);">#building-contest</span>' channel of my <a href="https://discord.gg/2HD9HBV" style="color: rgb(114, 137, 218);">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span style="color: rgb(245, 92, 87);">[SUB SPOT]</span>'s are only available to  Twitch subscribers while <span style="color: rgb(85, 255, 85);">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
-            </div>
-            
-            <br>
-            
-            <div class="discordwidget">
-                <a href="https://discord.gg/2HD9HBV" class="discordtext borderr" style="font-size: 15px;">Join The Discord! Click Here!</a>
-            </div>
-            
-            <br><br>
-            
-            <div name="questions" id="questions" style="height: auto;" class="smpheaderdiv">
-                <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Questions or Suggestions?</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">If you have any questions or suggestions, please let me know in my <a href="https://discord.gg/2HD9HBV" style="color: rgb(114, 137, 218);">Discord</a>!</p>
-            </div>
-        </body>
-        <br/><footer>Redirect to <a href="/gie">https://chan.dog/gie</a></footer>
-    </main>
-</html>
+            $.getJSON('/contestants.json', function(jd) {
+                $.each(jd.names, function(i, f) {
+                    //alert(jd.names[i]);
+                    if (jd.names[i].uuid == 0) {
+                        var image = '/images/filler/contestant' + i + '.png';
+                    } else {
+                        var image = 'https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=200&overlay';
+                    }
+
+                    if (jd.names[i].name == 0 && jd.names[i].sub == true) {
+                        var namevar = '<b class="colorred">[SUB SPOT]</b>';
+                        var linkvar = '#';
+                    } else if (jd.names[i].sub == false && jd.names[i].name == 0) {
+                        var namevar = '<b class="colorlime">[OPEN]</b>';
+                        var linkvar = '#';
+                    } else {
+                        var namevar = '';
+                        var linkvar = 'href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '';
+                    }
+
+                    if (jd.names[i].sub == true) {
+                        $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>');
+                    } else {
+                        $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<main>
+
+    <body>
+        <div style="height: auto;" class="smpheaderdiv">
+            <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Chan's Building Contest Explanation:</span>
+            <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">Hello everyone! I am hosting weekly housing build competitions live on Twitch every Friday!<br><br>Viewers of the stream will be able to visit my housing using '<span class="colorred">/visit Chandoggie</span>' in a housing lobby.<br><br>Each round, viewers will be able to vote off a builder using a poll in Twitch chat.<br><br>Below you will find a list of contestant who are participating! You'll also find a list of previous winners!<br><br>If you'd like to build and try your hand at winning, check out the <span class="colorpink">"How to Apply"</span> section to fill an <span class="colorlime">[OPEN]</span> slot!<br><span class="colorred">[SUB SPOT]</span>'s are only available to Twitch subscribers!</p>
+        </div>
+        <br>
+        <div class="twitchwidget">
+            <a href="https://twitch.tv/Chandoggie" class="twitchtext borderr" style="font-size: 15px;">Watch The Competition!<br> Live at Twitch.tv/Chandoggie</a>
+        </div>
+        <br><br>
+        <div name="contestants" id="contestants" style="height: auto;" class="smpheaderdiv">
+            <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Meet the Contestants:</span>
+            <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">
+                Here are the contestants for our next contest on:<br><a name="nextcontest" id="nextcontest" href="https://twitch.tv/Chandoggie" class="colordarkpurple"><br>https://twitch.tv/Chandoggie</a><br><br>This list will be updated during &amp; after the event to reflect a contestants position.<br><br>Usernames &amp; Faces link to <span class="colorred">plancke.io</span>.<br><br>Check out the <span style="color: rgb(252, 84, 252);">"How to Apply"</span> section if you'd like to participate and fill an <span style="color: rgb(85, 255, 85);">[OPEN]</span> slot!
+            </p>
+            <!-- Stuff Gets Filled In Here From JSON Script -->
+        </div>
+        <br><br>
+        <div name="prevwinners" id="prevwinners" class="heightauto smpheaderdiv">
+            <p class="smptext borderr startdate">
+                <span class="headerhousing">Previous Winners!</span>
+            </p>   
+            <!-- Stuff Gets Filled In Here From JSON Script -->
+        </div>
+        <br><br>
+        <div name="apply" id="apply" style="height: auto;" class="smpheaderdiv">
+            <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">How To Apply:</span>
+            <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">If you'd like to build in the contest, let me know your IGN in the '<span style="color: rgb(114, 137, 218);">#building-contest</span>' channel of my <a href="https://discord.gg/2HD9HBV" style="color: rgb(114, 137, 218);">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span style="color: rgb(245, 92, 87);">[SUB SPOT]</span>'s are only available to Twitch subscribers while <span style="color: rgb(85, 255, 85);">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
+        </div>
+        <br>
+        <div class="discordwidget">
+            <a href="https://discord.gg/2HD9HBV" class="discordtext borderr" style="font-size: 15px;">Join The Discord! Click Here!</a>
+        </div>
+        <br><br>
+        <div name="questions" id="questions" style="height: auto;" class="smpheaderdiv">
+            <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr"><span class="headerhousing">Questions or Suggestions?</span>
+            <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="smptext borderr">If you have any questions or suggestions, please let me know in my <a href="https://discord.gg/2HD9HBV" style="color: rgb(114, 137, 218);">Discord</a>!</p>
+        </div>
+    </body>
+    <br />
+    <footer>Redirect to <a href="/gie">https://chan.dog/gie</a></footer>
+</main></html>

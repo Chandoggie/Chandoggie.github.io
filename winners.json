@@ -1,0 +1,24 @@
+{
+    "winners": [
+        {
+            "datetime": "Week 1 [Nov. 4th]",
+            "link": "https://www.twitch.tv/videos/792203037",
+            "first": "_Sunet_",
+            "firstuuid": "484056425da84dd09dd7d3c6811ed87a",
+            "second": "chpn",
+            "seconduuid": "a59dce2e79e24229ab8398c885fceb23",
+            "third": "CaptainCookie886",
+            "thirduuid": "de8b618872e7499ebd164778dd67bfca"
+        },
+        {
+            "datetime": "Week 2 [Nov. 13th]",
+            "link": "https://www.twitch.tv/videos/802089702",
+            "first": "ZakGotMc",
+            "firstuuid": "ff5ea368071940cfb975d3b7f0051ff7",
+            "second": "cooperh415",
+            "seconduuid": "90ccc4534b6c4e74ad630a64680dcbac",
+            "third": "Ryanator21",
+            "thirduuid": "829996c06b40461db88a81b69cbb85df"
+        }
+    ]
+}

@@ -38,6 +38,10 @@ ul {
     margin: 0px;
 }
 
+.heightauto {
+    height: auto;
+}
+
 header {
     padding-top: 5px;
 }
@@ -51,6 +55,7 @@ header {
     overflow: hidden;
     background-color: rgb(112, 112, 112);
 }
+
 /* Twitch Widget Stuff */
 
 .twitchwidget {
@@ -60,13 +65,13 @@ header {
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
-    background-color: rgb(145, 70, 255);
+    background-color: rgb(145, 74, 255);
 }
 
 .twitchtext {
-    color: rgb(145, 70, 255);
+    color: rgb(145, 74, 255);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: auto;
     line-height: 25px;
     float: left;
@@ -93,7 +98,7 @@ header {
 .discordtext {
     color: rgb(114, 137, 218);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -120,7 +125,7 @@ header {
 .enabletext {
     color: rgb(137, 175, 0);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -148,7 +153,7 @@ header {
 .disabletext {
     color: rgb(245, 92, 87);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -176,7 +181,7 @@ header {
 .computertext {
     color: rgb(52, 208, 219);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -204,7 +209,7 @@ header {
 .housingcomptext {
     color: rgb(252, 84, 252);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -224,14 +229,6 @@ header {
 .headerhousing {
     color: rgb(252, 84, 252);
     font-size: 18px;
-}
-
-li a {
-    display: block;
-    width: auto;
-    height: 25px;
-    font-size: 20px;
-    text-align: center;
 }
 
 .borderradiusright {
@@ -258,25 +255,33 @@ li a {
 
 /* Comp Stuff */
 .opentag {
-    margin-bottom: 5px;
-    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 5px;
     float: left
 }
 
-.opentagbottom {
-    margin: auto;
-    float: left
+.contestant {
+    margin-bottom: auto;
+    margin-top: 5px;
+    float: right
 }
 
-.contestant17 {
+.startdate {
+    margin-top: 20px;
     margin-bottom: 5px;
-    margin-top: auto;
-    float: right
-}
-
-.contestant8 {
-    margin: auto;
-    float: right
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    float: left;
+    height: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(249, 190, 35);
+    width: 205px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Text Overflow Class */
@@ -284,6 +289,9 @@ li a {
     overflow-wrap: break-word;
 }
 
+.linkunderline {
+    text-decoration: underline;
+}
 .smptext {
     color: rgb(249, 190, 35);
     width: 205px;
@@ -309,7 +317,7 @@ li a {
 }
 
 .housingurl:hover {
-    color:  rgb(252, 84, 252);
+    color: rgb(252, 84, 252);
 }
 
 /* Twitter */
@@ -377,7 +385,7 @@ li a {
     font-size: 18px;
     color: rgb(249, 190, 35);
     transition-duration: 0.3s;
-    width:  205px;
+    width: 205px;
     height: 25px;
     line-height: 25px;
     float: left;
@@ -410,4 +418,24 @@ li a {
 
 .colorpink {
     color: rgb(252, 84, 252);
+}
+
+.colorbabypurple {
+    color: rgb(161, 133, 209);
+}
+
+.colorgold {
+    color: rgb(251, 228, 132);
+}
+
+.colorsilver {
+    color: rgb(214, 213, 221);
+}
+
+.colorbronze {
+    color: rgb(175, 126, 109);
+}
+
+.colordarkpurple {
+    color: rgb(145, 74, 255);
 }
