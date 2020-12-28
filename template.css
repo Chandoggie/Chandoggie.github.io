@@ -61,7 +61,7 @@ header {
 .twitchwidget {
     height: auto;
     width: 205px;
-    margin: auto;
+    margin-bottom: 20px;
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
@@ -88,7 +88,6 @@ header {
 .discordwidget {
     height: 25px;
     width: 205px;
-    margin: auto;
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
@@ -250,7 +249,7 @@ header {
 
 .contestheaderdiv {
     width: 205px;
-    margin: auto;
+    margin-bottom: 20px;
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
@@ -388,4 +387,8 @@ li a {
 
 .colorbabyblue {
     color: rgb(114, 137, 218);
+}
+
+.colorbabyerblue {
+    color: rgb(52, 208, 219);
 }
