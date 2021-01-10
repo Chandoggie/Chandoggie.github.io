@@ -47,7 +47,7 @@ header {
 }
 
 .headerdiv {
-    height: 100px;
+    height: auto;
     width: 205px;
     margin: auto;
     padding: 7px;
@@ -247,6 +247,16 @@ header {
     font-size: 18px;
 }
 
+.halftext {
+    margin-bottom: 7px;
+    width: 100px;
+    background-color: rgb(51, 51, 51);
+    margin: auto;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
 .contestheaderdiv {
     width: 205px;
     margin-bottom: 20px;
@@ -359,6 +369,14 @@ li a {
 
 .colorred {
     color: rgb(245, 92, 87);
+}
+
+.colordarkgreen {
+    color: rgb(24, 139, 0);
+}
+
+.colordarkred {
+    color: rgb(127, 0, 10);
 }
 
 .colorpink {

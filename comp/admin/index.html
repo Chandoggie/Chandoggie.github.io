@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Chan's Building Contest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/template.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Chandoggie's Personal Website">
+    <meta name="keywords" content="minecraft, chandoggie, hypixel">
+    <meta name="author" content="Chandoggie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Chandoggie's Personal Website" />
+    <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@chandoggie" />
+    <meta name="twitter:creator" content="@chandoggie" />
+    <meta property="og:url" content="https://chan.dog" />
+    <meta property="og:title" content="Chandoggie's Personal Website" />
+    <meta property="og:description" content="An explanation on Chan's Housing Building Contests!" />
+    <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
+    <meta name="theme-color" content="#A800A8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('/contestants.json', function(jd) {
+                $.each(jd.names, function(i, f) {
+                    //alert(jd.names[i].uuid);
+                    if (jd.names[i].uuid == 0) {} else {
+
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=112&overlay" class="borderr">');
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=56&overlay" style="margin-left: 5px; margin-right: 5px;" class="borderr">');
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=28&overlay" class="borderr">');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<main>
+
+    <body>
+        <div style="width: 206px; height: auto; margin: auto; padding-top: 10px;">
+            <!-- Previous Winners -->
+            <div name="adminfaces" id="adminfaces" class="heightauto contestheaderdiv" style="width: 206px; margin: auto;">
+                <p class="comptext borderr startdate" style="margin: auto; margin-bottom: 7px; width: 206px;">
+                    <span class="headerhousing" style="margin: auto;">Admin Panel Faces</span>
+                </p>
+                <!-- Stuff Gets Filled In Here From JSON Script -->
+            </div>
+            <br>
+            <div class="heightauto headerdiv">
+                <p class="halftext borderr startdate" style="float: left; margin-bottom: 7px; width: 100px;">
+                    <span class="headerhousing colordarkgreen" style="margin: auto;">#188B00</span>
+                </p>
+                <p class="halftext borderr startdate" style="float: right; margin-bottom: 7px; width: 100px;">
+                    <span class="headerhousing colordarkred" style="margin: auto;">#7F000A</span>
+                </p>
+                <img src="/images/filler/greensquare.png" class="headerimage borderr" style="float: left">
+                <img src="/images/filler/redsquare.png" class="headerimage borderr" style="float: right">
+            </div>
+        </div>
+    </body>
+</main></html>
