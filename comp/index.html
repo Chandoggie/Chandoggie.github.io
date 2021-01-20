@@ -70,6 +70,10 @@
                     }
                 });
             });
+            
+            $.getJSON('https://discord.com/api/guilds/620495121950965760/widget.json', function(discordjd) {
+                $('#discount').prepend("Online Members: <b>" + discordjd.presence_count + "</b>");
+            });
         });
 
     </script>
@@ -86,11 +90,11 @@
             <!-- Applications Info -->
             <div name="apply" id="apply" style="float: right" class="heightauto contestheaderdiv">
                 <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">How To Apply:</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to build in the contest, let me know your IGN in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="https://discord.gg/2HD9HBV" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span class="colorred">[SUB SPOT]</span>'s are only available to Twitch subscribers while <span class="colorlime">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
+                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to build in the contest, let me know your IGN in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="/discord" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span class="colorred">[SUB SPOT]</span>'s are only available to Twitch subscribers while <span class="colorlime">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
             </div>
             <!-- Twitch Widget -->
             <div class="twitchwidget" style="float: left;">
-                <a href="https://twitch.tv/Chandoggie" class="twitchtext borderr" style="font-size: 15px;">Watch The Competition!<br> Live at Twitch.tv/Chandoggie</a>
+                <a href="https://twitch.tv/Chandoggie" class="twitchtext borderr" style="font-size: 15px;"><b>Watch The Competition!<br> Live at Twitch.tv/Chandoggie</b><img src="/images/profiletwi.png" class="borderr"></a>
             </div>
             <!-- Rules Info -->
             <div name="rules" id="rules" style="float: right" class="heightauto contestheaderdiv">
@@ -98,10 +102,10 @@
                 <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">We have implimented a few rules to make the competitions as fair as possible. <br><span class="colorlime">Our current rules are listed below:</span></p>
                 <p style="background-color: rgb(65, 65, 65); margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">1.</span> Votes should be cast solely for the builds themselves.</p>
                 <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">2.</span> Votes should be cast fairly regardless of the current vote count. <br>(No intentionally tying)</p>
-                <p style="background-color: rgb(65, 65, 65); margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">3.</span> Voting will proceed as listed:<br><br>Key:<br><span class="colorlime">[#P]</span> Number of "Passes"<br><span class="colorbabyerblue">[#>#]</span> Start to End Contestants<br><span class="colorred">Vote to Eliminate</span><br>Round 1 - <span class="colorlime">[3P]</span> <span class="colorbabyerblue">[8>7]</span><br>Round 2 - <span class="colorlime">[2P]</span> <span class="colorbabyerblue">[7>6]</span><br>Round 3 - <span class="colorlime">[1P]</span> <span class="colorbabyerblue">[6>5]</span><br>Round 4 - <span class="colorlime">[0P]</span> <span class="colorbabyerblue">[5>4]</span><br>Round 5 - <span class="colorlime">[0P]</span> <span class="colorbabyerblue">[4>3]</span><br>Round 6 - <span class="colorlime">[0P]</span> <span class="colorbabyerblue">[3>2]</span><br><span class="colorlime">Vote to Win</span><br>Round 7 - <span class="colorlime">[0P]</span> <span class="colorbabyerblue">[2>1]</span><br><br>Voting will be explained throughout the stream as the contest progresses.</p>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">4.</span> Twitch Chat will be placed into Emote Only mode &amp; Housing Chat will be muted during voting to prevent collaboration.</p>
+                <p style="background-color: rgb(65, 65, 65); margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">3.</span> Voting will take place through channel points:<br><br><span class="colorred"><b>Vote to Eliminate</b></span><br>Round 1 - Round 6<br><span class="colorlime"><b>Vote to Win</b></span><br>Round 7<br><br>Voting will be explained throughout the stream as the contest progresses.</p>
+                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">4.</span> You may only vote <span class="colorred">ONCE</span> per round. Voting twice or more will result in all your votes being removed.</p>
                 <p style="background-color: rgb(65, 65, 65); margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">5.</span> Contestants are <span class="colorred">NOT ALLOWED</span> to vote in <span class="colorred">ANY</span> round.<br>Doing so will result in a disqualification.</p>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">6.</span> Participants will be given a 5 minute buffer to arrive at the competition housing when the stream begins.<br>Otherwise a new contestant will be chosen.</p>
+                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="colorred">6.</span> Participants will be given a 10 minute buffer to arrive at the competition housing when the stream begins.<br>Otherwise a new contestant will be chosen &amp; they will be restricted from applying .</p>
             </div>
 
 
@@ -123,11 +127,11 @@
             <!-- Questions -->
             <div name="questions" id="questions" style="height: auto; float: right; float: right;" class="contestheaderdiv">
                 <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">Questions or Suggestions?</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you have any questions or suggestions, please let me know in my <a href="https://discord.gg/2HD9HBV" style="color: rgb(114, 137, 218);">Discord</a>!</p>
+                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you have any questions or suggestions, please let me know in my <a href="/discord" style="color: rgb(114, 137, 218);">Discord</a>!</p>
             </div>
             <!-- Discord Widget -->
-            <div class="discordwidget heightauto" style="float: right; margin-bottom: 20px;">
-                <a href="https://discord.gg/2HD9HBV" class="discordtext borderr" style="font-size: 15px;">Join The Discord! Click Here!</a>
+            <div class="discordwidget heightauto" style="float: right;">
+                <a href="/discord" class="discordtext borderr heightauto" style="font-size: 15px; padding-top: 5px;">Join The Discord! Click Here!<br><span name="discount" id="discount" style="padding-bottom: 5px;"></span><img src="/images/profiledis.png" class="borderr"></a>
             </div>
         </div>
     </body>

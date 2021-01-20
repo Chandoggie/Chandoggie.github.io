@@ -65,11 +65,11 @@ header {
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
-    background-color: rgb(145, 74, 255);
+    background-color: rgb(143, 72, 255);
 }
 
 .twitchtext {
-    color: rgb(145, 74, 255);
+    color: rgb(143, 72, 255);
     transition-duration: 0.3s;
     width: 205px;
     height: auto;
@@ -81,25 +81,26 @@ header {
 
 .twitchtext:hover {
     color: rgb(51, 51, 51);
-    background-color: rgb(161, 133, 209);
+    background-color: rgb(143, 72, 255);
 }
 
 /* Discord Widget Stuff */
 .discordwidget {
-    height: 25px;
+    height: auto;
     width: 205px;
     padding: 7px;
     border-radius: 7px;
     overflow: hidden;
-    background-color: rgb(114, 137, 218);
+    background-color: rgb(142, 157, 255);
 }
 
 .discordtext {
-    color: rgb(114, 137, 218);
+    color: rgb(142, 157, 255);
     transition-duration: 0.3s;
     width: 205px;
-    height: 25px;
-    line-height: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: auto;
     float: left;
     background-color: rgb(51, 51, 51);
     text-align: center;
@@ -107,7 +108,7 @@ header {
 
 .discordtext:hover {
     color: rgb(51, 51, 51);
-    background-color: rgb(114, 137, 218);
+    background-color: rgb(142, 157, 255);
 }
 
 /* Computer Specs */
@@ -307,7 +308,7 @@ header {
 
 /* Twitch */
 .urltwitch {
-    color: rgb(145, 74, 255);
+    color: rgb(143, 72, 255);
     transition-duration: 0.3s;
     width: 100px;
     height: 25px;
@@ -317,7 +318,7 @@ header {
 
 .urltwitch:hover {
     color: white;
-    background-color: rgb(145, 74, 255);
+    background-color: rgb(143, 72, 255);
 }
 
 /* Hypixel */
@@ -353,13 +354,13 @@ li a {
 }
 
 .babybluebox {
-    background-color: rgba(114, 137, 218, .1);
+    background-color: rgba(142, 157, 255, .1);
     border-radius: 3px;
 }
 
 .babybluebox:hover {
     color: white;
-    background-color: rgb(114, 137, 218);
+    background-color: rgb(142, 157, 255);
 }
 
 /* Colors */
@@ -384,7 +385,7 @@ li a {
 }
 
 .colorbabypurple {
-    color: rgb(161, 133, 209);
+    color: rgb(143, 72, 255);
 }
 
 .colorgold {
@@ -400,11 +401,11 @@ li a {
 }
 
 .colordarkpurple {
-    color: rgb(145, 74, 255);
+    color: rgb(143, 72, 255);
 }
 
 .colorbabyblue {
-    color: rgb(114, 137, 218);
+    color: rgb(142, 157, 255);
 }
 
 .colorbabyerblue {
