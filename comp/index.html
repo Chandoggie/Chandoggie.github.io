@@ -32,13 +32,14 @@
 
             $.getJSON('/winners.json', function(winjd) {
                 $.each(winjd.winners, function(i, f) {
-                    $('#prevwinners').append('<p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p>');
-                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p>');
-                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p>');
-                    $('#prevwinners').append('<a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p>');
+                    if (i == 0) {
+                    $('#prevwinners').prepend('<div><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
+                    } else {
+                    $('#prevwinners').prepend('<div><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="enddate"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant enddate"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
+                    }
                 });
             });
-
+            
             $.getJSON('/nextcontest.json', function(ncjd) {
                 $('#nextcontest').prepend(ncjd.next);
             });
@@ -70,12 +71,11 @@
                     }
                 });
             });
-            
+
             $.getJSON('https://discord.com/api/guilds/620495121950965760/widget.json', function(discordjd) {
                 $('#discount').prepend("Online Members: <b>" + discordjd.presence_count + "</b>");
             });
         });
-
     </script>
 </head>
 <main>
@@ -110,10 +110,8 @@
 
 
             <!-- Previous Winners -->
-            <div name="prevwinners" id="prevwinners" class="heightauto contestheaderdiv" style="float: left;">
-                <p class="comptext borderr startdate">
-                    <span class="headerhousing">Previous Winners!</span>
-                </p>
+            <div class="contestheaderdiv scrolloff" style="float: left; margin-bottom: 5px;"><p class="comptext borderr startdate"><span class="headerhousing">Previous Winners!<br>Scroll For More!</span></p></div>
+            <div name="prevwinners" id="prevwinners" class="contestheaderdiv scrolloff" style="float: left; overflow: scroll; height: 722px;">
                 <!-- Stuff Gets Filled In Here From JSON Script -->
             </div>
             <!-- Meet the Contestants -->
@@ -125,16 +123,14 @@
                 <!-- Stuff Gets Filled In Here From JSON Script -->
             </div>
             <!-- Questions -->
-            <div name="questions" id="questions" style="height: auto; float: right; float: right;" class="contestheaderdiv">
+            <div name="questions" id="questions" style="height: auto; float: right; float: left;" class="contestheaderdiv">
                 <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">Questions or Suggestions?</span>
                 <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you have any questions or suggestions, please let me know in my <a href="/discord" style="color: rgb(114, 137, 218);">Discord</a>!</p>
             </div>
             <!-- Discord Widget -->
-            <div class="discordwidget heightauto" style="float: right;">
+            <div class="discordwidget heightauto" style="float: left;">
                 <a href="/discord" class="discordtext borderr heightauto" style="font-size: 15px; padding-top: 5px;">Join The Discord! Click Here!<br><span name="discount" id="discount" style="padding-bottom: 5px;"></span><img src="/images/profiledis.png" class="borderr"></a>
             </div>
         </div>
     </body>
-</main>
-
-</html>
+</main></html>
