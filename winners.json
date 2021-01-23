@@ -89,6 +89,16 @@
             "seconduuid": "323575bef91f46fc943c95bb6fa97e4a",
             "third": "TIKI1661",
             "thirduuid": "41897ef3f5dd4271b17f3eddf603371c"
+        },
+        {
+            "datetime": "Week 10 [Jan. 22th]",
+            "link": "https://www.twitch.tv/videos/884185123",
+            "first": "GoodboyFM",
+            "firstuuid": "8298a0dac67d470aae2d6236fc1480cc",
+            "second": "Smidgy",
+            "seconduuid": "cc7a1eb59480430a99e6f405c3e95c52",
+            "third": "KelpThief",
+            "thirduuid": "0fa8a2b0408a43289917a880835bc08a"
         }
     ]
 }
