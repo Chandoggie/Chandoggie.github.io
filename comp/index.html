@@ -29,17 +29,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-
             $.getJSON('/winners.json', function(winjd) {
                 $.each(winjd.winners, function(i, f) {
-                    if (i == 0) {
-                    $('#prevwinners').prepend('<div><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
-                    } else {
-                    $('#prevwinners').prepend('<div><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="enddate"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant enddate"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
-                    }
+                    $('#prevwinners').prepend('<div id="divwinposition' + i + '"><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant enddate" id="winposition' + i + '"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
                 });
+                $('#winposition0').removeClass("enddate");
+                $('#winposition0').addClass("bottomdate");
+                $('#divwinposition0').append('<p class="startdate winpos0"></p>');
             });
-            
+
             $.getJSON('/nextcontest.json', function(ncjd) {
                 $('#nextcontest').prepend(ncjd.next);
             });
@@ -90,7 +88,7 @@
             <!-- Applications Info -->
             <div name="apply" id="apply" style="float: right" class="heightauto contestheaderdiv">
                 <p style="padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">How To Apply:</span>
-                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to build in the contest, let me know your IGN in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="/discord" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span class="colorred">[SUB SPOT]</span>'s are only available to Twitch subscribers while <span class="colorlime">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
+                <p style="margin-top: 5px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to participate in the contest, you can apply in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="/discord" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br><span class="colorred">[SUB SPOT]</span>'s are only available to Twitch subscribers while <span class="colorlime">[OPEN]</span> slots are for anyone!<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
             </div>
             <!-- Twitch Widget -->
             <div class="twitchwidget" style="float: left;">
@@ -110,9 +108,11 @@
 
 
             <!-- Previous Winners -->
-            <div class="contestheaderdiv scrolloff" style="float: left; margin-bottom: 5px;"><p class="comptext borderr startdate"><span class="headerhousing">Previous Winners!<br>Scroll For More!</span></p></div>
+            <div class="contestheaderdiv scrolloff" style="float: left; margin-bottom: 5px;">
+                <p class="comptext borderr startdate"><span class="headerhousing">Previous Winners!<br>Scroll For More!</span></p>
+            </div>
             <div name="prevwinners" id="prevwinners" class="contestheaderdiv scrolloff" style="float: left; overflow: scroll; height: 722px;">
-                <!-- Stuff Gets Filled In Here From JSON Script -->
+                <!-- ^Stuff Gets Filled In Here From JSON Script^ -->
             </div>
             <!-- Meet the Contestants -->
             <div name="contestants" id="contestants" style="float: right;" class="heightauto contestheaderdiv">

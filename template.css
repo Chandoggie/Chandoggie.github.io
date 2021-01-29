@@ -233,6 +233,17 @@ header {
     margin-bottom: 20px;
 }
 
+.bottomdate {
+    margin-bottom: 0px;
+}
+
+.winpos0 {
+    margin-bottom: 0px;
+    background-color: rgb(112, 112, 112);
+    height: 7px;
+    padding: 0px;
+}
+
 /* Text Overflow Class */
 .overflow {
     overflow-wrap: break-word;
@@ -368,7 +379,7 @@ li a {
 }
 
 .scrolloff::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Colors */
