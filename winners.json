@@ -109,6 +109,16 @@
             "seconduuid": "ca45c135bb954b5e9fe9f1cc2b05a798",
             "third": "Farkler_",
             "thirduuid": "323575bef91f46fc943c95bb6fa97e4a"
+        },
+        {
+            "datetime": "Week 12 [Feb. 5th]",
+            "link": "https://www.twitch.tv/videos/902618187",
+            "first": "Smidgy",
+            "firstuuid": "cc7a1eb59480430a99e6f405c3e95c52",
+            "second": "CallmeKaii",
+            "seconduuid": "4c7e4f7d7d6248ad81cba63d8d702808",
+            "third": "Ryanator21",
+            "thirduuid": "829996c06b40461db88a81b69cbb85df"
         }
     ]
 }
