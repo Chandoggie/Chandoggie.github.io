@@ -237,11 +237,20 @@ header {
     margin-bottom: 0px;
 }
 
+.topteam {
+    margin-top: 5px;
+}
+
 .winpos0 {
     margin-bottom: 0px;
     background-color: rgb(112, 112, 112);
     height: 7px;
     padding: 0px;
+}
+
+.teamimages {
+    margin-bottom: 5px;
+    margin-top: 0px;
 }
 
 /* Text Overflow Class */

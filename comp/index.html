@@ -31,7 +31,13 @@
         $(document).ready(function() {
             $.getJSON('/winners.json', function(winjd) {
                 $.each(winjd.winners, function(i, f) {
-                    $('#prevwinners').prepend('<div id="divwinposition' + i + '"><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant enddate" id="winposition' + i + '"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
+                    if (winjd.winners[i].type == "team") {
+                        //STUFF DONE HERE MEANS IT'S TEAM (TODO: Transfer all style to CSS)
+                        $('#prevwinners').prepend('<p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><p class="startdate borderr colorlime"><span class="colorgold">[1st]</span><br>' + winjd.winners[i].teamname1 + '</p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name1.ign1 + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].picid1.uuid1 + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name1.ign2 + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].picid1.uuid2 + '?size=200&overlay" class="teamimages imagewithradius contestant"></a><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name1.ign1 + '" class="housingurl">' + winjd.winners[i].name1.ign1 + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name1.ign2 + '" class="housingurl">' + winjd.winners[i].name1.ign2 + '</a></p><p class="startdate borderr colorlime"><span class="colorsilver">[2nd]</span><br>' + winjd.winners[i].teamname2 + '</p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name2.ign1 + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].picid2.uuid1 + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name2.ign2 + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].picid2.uuid2 + '?size=200&overlay" class="teamimages imagewithradius contestant"></a><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 20px;"><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name2.ign1 + '" class="housingurl">' + winjd.winners[i].name2.ign1 + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].name2.ign2 + '" class="housingurl">' + winjd.winners[i].name2.ign2 + '</a></p>');
+                    } else {
+                        //STUFF DONE HERE MEANS IT'S SOLO (TODO: Transfer all style to CSS)
+                        $('#prevwinners').prepend('<div id="divwinposition' + i + '"><p class="startdate borderr linkunderline"><a href="' + winjd.winners[i].link + '" class="colorbabypurple">' + winjd.winners[i].datetime + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].firstuuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorgold">[1st Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].first + '" class="housingurl">' + winjd.winners[i].first + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].seconduuid + '?size=200&overlay" class="imagewithradius contestant"></a><p class="borderr specspage opentag overflow"><b class="colorsilver">[2nd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].second + '" class="housingurl">' + winjd.winners[i].second + '</a></p><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '"><img src="https://crafatar.com/avatars/' + winjd.winners[i].thirduuid + '?size=200&overlay" class="imagewithradius contestant enddate" id="winposition' + i + '"></a><p class="borderr specspage opentag overflow"><b class="colorbronze">[3rd Place]</b><br><br><a href="https://plancke.io/hypixel/player/stats/' + winjd.winners[i].third + '" class="housingurl">' + winjd.winners[i].third + '</a></p></div>');
+                    };
                 });
                 $('#winposition0').removeClass("enddate");
                 $('#winposition0').addClass("bottomdate");
@@ -43,31 +49,64 @@
             });
 
             $.getJSON('/contestants.json', function(jd) {
-                $.each(jd.names, function(i, f) {
-                    //alert(jd.names[i]);
-                    if (jd.names[i].uuid == 0) {
-                        var image = '/images/filler/contestant' + i + '.png';
+                if (jd.type == "team") {
+                    //STUFF DONE HERE MEANS IT'S TEAM
+                    //TEAM 1
+                    if (jd.teaminfo[0].sub == true) { //SUB = TRUE (RED TITLE)
+                        $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[0].teamname + '</p>');
+                    } else { //SUB = FALSE (GREEN TITLE)
+                        $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[0].teamname + '</p>');
+                    }; //ADD MEMBER 1 & 2
+                    $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[0].name + '"><img src="https://crafatar.com/avatars/' + jd.players[0].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[1].name + '"><img src="https://crafatar.com/avatars/' + jd.players[1].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[0].name + '" class="housingurl">' + jd.players[0].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[1].name + '" class="housingurl">' + jd.players[1].name + '</a></p>');
+                    //TEAM 2
+                    if (jd.teaminfo[1].sub == true) {
+                        $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[1].teamname + '</p>');
                     } else {
-                        var image = 'https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=200&overlay';
-                    }
+                        $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[1].teamname + '</p>');
+                    }; //ADD MEMBER 3 & 4
+                    $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[2].name + '"><img src="https://crafatar.com/avatars/' + jd.players[2].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[3].name + '"><img src="https://crafatar.com/avatars/' + jd.players[3].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[2].name + '" class="housingurl">' + jd.players[2].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[3].name + '" class="housingurl">' + jd.players[3].name + '</a></p>');
+                    //TEAM 3
+                    if (jd.teaminfo[2].sub == true) {
+                        $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[2].teamname + '</p>');
+                    } else {
+                        $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[2].teamname + '</p>');
+                    }; //ADD MEMBER 5 & 6
+                    $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[4].name + '"><img src="https://crafatar.com/avatars/' + jd.players[4].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[5].name + '"><img src="https://crafatar.com/avatars/' + jd.players[5].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[4].name + '" class="housingurl">' + jd.players[4].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[5].name + '" class="housingurl">' + jd.players[5].name + '</a></p>');
+                    //TEAM 4
+                    if (jd.teaminfo[3].sub == true) {
+                        $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[3].teamname + '</p>');
+                    } else {
+                        $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[3].teamname + '</p>');
+                    }; //ADD MEMBER 7 & 8
+                    $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[6].name + '"><img src="https://crafatar.com/avatars/' + jd.players[6].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[7].name + '"><img src="https://crafatar.com/avatars/' + jd.players[7].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 0px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[6].name + '" class="housingurl">' + jd.players[6].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[7].name + '" class="housingurl">' + jd.players[7].name + '</a></p>');
 
-                    if (jd.names[i].name == 0 && jd.names[i].sub == true) {
-                        var namevar = '<b class="colorred">[SUB SPOT]</b>';
-                        var linkvar = '#';
-                    } else if (jd.names[i].sub == false && jd.names[i].name == 0) {
-                        var namevar = '<b class="colorlime">[OPEN]</b>';
-                        var linkvar = '#';
-                    } else {
-                        var namevar = '';
-                        var linkvar = 'href="https://plancke.io/hypixel/player/stats/' + jd.names[i].name + '';
-                    }
+                } else {
+                    //STUFF DONE HERE MEANS IT'S SOLO
+                    $.each(jd.players, function(i, f) {
+                        if (jd.players[i].uuid == 0) {
+                            var image = '/images/filler/contestant' + i + '.png';
+                        } else {
+                            var image = 'https://crafatar.com/avatars/' + jd.players[i].uuid + '?size=200&overlay';
+                        }
 
-                    if (jd.names[i].sub == true) {
-                        $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>');
-                    } else {
-                        $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.names[i].name + '</a></p>');
-                    }
-                });
+                        if (jd.players[i].name == 0 && jd.players[i].sub == true) {
+                            var namevar = '<b class="colorred">[SUB SPOT]</b>';
+                            var linkvar = '#';
+                        } else if (jd.players[i].sub == false && jd.players[i].name == 0) {
+                            var namevar = '<b class="colorlime">[OPEN]</b>';
+                            var linkvar = '#';
+                        } else {
+                            var namevar = '';
+                            var linkvar = 'href="https://plancke.io/hypixel/player/stats/' + jd.players[i].name + '';
+                        }
+
+                        if (jd.players[i].sub == true) {
+                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.players[i].name + '</a></p>');
+                        } else {
+                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.players[i].name + '</a></p>');
+                        }
+                    })
+                };
             });
 
             $.getJSON('https://discord.com/api/guilds/620495121950965760/widget.json', function(discordjd) {

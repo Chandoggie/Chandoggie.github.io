@@ -2,6 +2,7 @@
     "winners": [
         {
             "datetime": "Week 1 [Nov. 4th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/792203037",
             "first": "_Sunet_",
             "firstuuid": "484056425da84dd09dd7d3c6811ed87a",
@@ -12,6 +13,7 @@
         },
         {
             "datetime": "Week 2 [Nov. 13th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/802089702",
             "first": "ZakGotMc",
             "firstuuid": "ff5ea368071940cfb975d3b7f0051ff7",
@@ -22,6 +24,7 @@
         },
         {
             "datetime": "Week 3 [Nov. 20th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/810041390",
             "first": "Pigleet",
             "firstuuid": "56583ba060974a5f91e591ab9de26590",
@@ -32,6 +35,7 @@
         },
         {
             "datetime": "Week 4 [Dec. 4th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/826248123",
             "first": "Smidgy",
             "firstuuid": "cc7a1eb59480430a99e6f405c3e95c52",
@@ -42,6 +46,7 @@
         },
         {
             "datetime": "Week 5 [Dec. 11th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/834122627",
             "first": "Zapril",
             "firstuuid": "441e86e7065a498098f6bb647421b16d",
@@ -52,6 +57,7 @@
         },
         {
             "datetime": "Week 6 [Dec. 18th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/842205693",
             "first": "Smidgy",
             "firstuuid": "cc7a1eb59480430a99e6f405c3e95c52",
@@ -62,6 +68,7 @@
         },
         {
             "datetime": "Week 7 [Jan. 1st]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/858036464",
             "first": "Rcohen72",
             "firstuuid": "de287924865546ecabb0eebedc2dda1f",
@@ -72,6 +79,7 @@
         },
         {
             "datetime": "Week 8 [Jan. 8th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/866444171",
             "first": "Smidgy",
             "firstuuid": "cc7a1eb59480430a99e6f405c3e95c52",
@@ -82,6 +90,7 @@
         },
         {
             "datetime": "Week 9 [Jan. 15th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/875157444",
             "first": "Incompleteusern",
             "firstuuid": "e19c1234a0634ae587ff1d643e7b0ad0",
@@ -92,6 +101,7 @@
         },
         {
             "datetime": "Week 10 [Jan. 22th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/884185123",
             "first": "GoodboyFM",
             "firstuuid": "8298a0dac67d470aae2d6236fc1480cc",
@@ -102,6 +112,7 @@
         },
         {
             "datetime": "Week 11 [Jan. 29th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/893310947",
             "first": "_Sunet_",
             "firstuuid": "484056425da84dd09dd7d3c6811ed87a",
@@ -112,6 +123,7 @@
         },
         {
             "datetime": "Week 12 [Feb. 5th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/902618187",
             "first": "Smidgy",
             "firstuuid": "cc7a1eb59480430a99e6f405c3e95c52",
@@ -122,6 +134,7 @@
         },
         {
             "datetime": "Week 13 [Feb. 12th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/911753331",
             "first": "_Sunet_",
             "firstuuid": "484056425da84dd09dd7d3c6811ed87a",
@@ -132,6 +145,7 @@
         },
         {
             "datetime": "Week 14 [Feb. 19th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/920894301",
             "first": "Rcohen72",
             "firstuuid": "de287924865546ecabb0eebedc2dda1f",
@@ -142,6 +156,7 @@
         },
         {
             "datetime": "Week 15 [Feb. 26th]",
+            "type": "solo",
             "link": "https://www.twitch.tv/videos/929735093",
             "first": "Didi_Skywalker",
             "firstuuid": "f8a9e651e8544abd8fef5a02a75ac25a",
@@ -149,6 +164,17 @@
             "seconduuid": "4c7e4f7d7d6248ad81cba63d8d702808",
             "third": "nullDorito",
             "thirduuid": "a7b317669c3945a380cd96d1f516b858"
+        },
+        {
+            "datetime": "Week 16 [Mar. 5th]",
+            "type": "team",
+            "link": "https://www.twitch.tv/videos/938520054",
+            "teamname1": "The Skyblockians",
+            "name1": {"ign1" : "ValgoMC", "ign2" : "Gamazations"},
+            "picid1": {"uuid1" : "5be2bf81015b45359c9ed8515fc30c94", "uuid2" : "ca45c135bb954b5e9fe9f1cc2b05a798"},
+            "teamname2": "Chika Fan Club",
+            "name2": {"ign1" : "Piraten100", "ign2" : "Bubross"},
+            "picid2": {"uuid1" : "9e8a38e6578648759b6aa45e2cc956af", "uuid2" : "bcfeb206d4154168802e764dfe7bd2e0"}
         }
     ]
 }

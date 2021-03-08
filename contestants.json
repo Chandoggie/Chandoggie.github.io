@@ -1,5 +1,24 @@
 {
-    "names": [
+    "type": "solo",
+    "teaminfo": [
+        {
+            "teamname": "[SUB SLOT]",
+            "sub": true
+        },
+        {
+            "teamname": "[SUB SLOT]",
+            "sub": true
+        },
+        {
+            "teamname": "[OPEN]",
+            "sub": false
+        },
+        {
+            "teamname": "[OPEN]",
+            "sub": false
+        }
+    ],
+    "players": [
         {
             "name": "",
             "uuid": "",
