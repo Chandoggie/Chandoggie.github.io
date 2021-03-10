@@ -52,28 +52,30 @@
                 if (jd.type == "team") {
                     //STUFF DONE HERE MEANS IT'S TEAM
                     //TEAM 1
-                    if (jd.teaminfo[0].sub == true) { //SUB = TRUE (RED TITLE)
+                    
+                    //this could probably a for loop
+                    if (jd.teaminfo[0].sub) { //SUB = TRUE (RED TITLE)
                         $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[0].teamname + '</p>');
                     } else { //SUB = FALSE (GREEN TITLE)
                         $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[0].teamname + '</p>');
                     }; //ADD MEMBER 1 & 2
                     $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[0].name + '"><img src="https://crafatar.com/avatars/' + jd.players[0].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[1].name + '"><img src="https://crafatar.com/avatars/' + jd.players[1].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[0].name + '" class="housingurl">' + jd.players[0].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[1].name + '" class="housingurl">' + jd.players[1].name + '</a></p>');
                     //TEAM 2
-                    if (jd.teaminfo[1].sub == true) {
+                    if (jd.teaminfo[1].sub) {
                         $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[1].teamname + '</p>');
                     } else {
                         $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[1].teamname + '</p>');
                     }; //ADD MEMBER 3 & 4
                     $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[2].name + '"><img src="https://crafatar.com/avatars/' + jd.players[2].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[3].name + '"><img src="https://crafatar.com/avatars/' + jd.players[3].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[2].name + '" class="housingurl">' + jd.players[2].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[3].name + '" class="housingurl">' + jd.players[3].name + '</a></p>');
                     //TEAM 3
-                    if (jd.teaminfo[2].sub == true) {
+                    if (jd.teaminfo[2].sub) {
                         $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[2].teamname + '</p>');
                     } else {
                         $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[2].teamname + '</p>');
                     }; //ADD MEMBER 5 & 6
                     $('#contestants').append('<a href="https://plancke.io/hypixel/player/stats/' + jd.players[4].name + '"><img src="https://crafatar.com/avatars/' + jd.players[4].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant" style="float: left;"></a><a href="https://plancke.io/hypixel/player/stats/' + jd.players[5].name + '"><img src="https://crafatar.com/avatars/' + jd.players[5].uuid + '?size=200&overlay" class="teamimages imagewithradius contestant"></a></p><p class="borderr opentag overflow startdate" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;"><a href="https://plancke.io/hypixel/player/stats/' + jd.players[4].name + '" class="housingurl">' + jd.players[4].name + '</a><br><a href="https://plancke.io/hypixel/player/stats/' + jd.players[5].name + '" class="housingurl">' + jd.players[5].name + '</a></p>');
                     //TEAM 4
-                    if (jd.teaminfo[3].sub == true) {
+                    if (jd.teaminfo[3].sub) {
                         $('#contestants').append('<p class="startdate borderr colorred topteam">' + jd.teaminfo[3].teamname + '</p>');
                     } else {
                         $('#contestants').append('<p class="startdate borderr colorlime topteam">' + jd.teaminfo[3].teamname + '</p>');
@@ -83,27 +85,28 @@
                 } else {
                     //STUFF DONE HERE MEANS IT'S SOLO
                     $.each(jd.players, function(i, f) {
-                        if (jd.players[i].uuid == 0) {
+                        var player = jd.plaers[i];
+                        if (player.uuid == 0) {
                             var image = '/images/filler/contestant' + i + '.png';
                         } else {
-                            var image = 'https://crafatar.com/avatars/' + jd.players[i].uuid + '?size=200&overlay';
+                            var image = 'https://crafatar.com/avatars/' + player.uuid + '?size=200&overlay';
                         }
 
-                        if (jd.players[i].name == 0 && jd.players[i].sub == true) {
+                        if (player.name == 0 && player.sub) {
                             var namevar = '<b class="colorred">[SUB SPOT]</b>';
                             var linkvar = '#';
-                        } else if (jd.players[i].sub == false && jd.players[i].name == 0) {
+                        } else if (player.name == 0 && !player.sub) {
                             var namevar = '<b class="colorlime">[OPEN]</b>';
                             var linkvar = '#';
                         } else {
                             var namevar = '';
-                            var linkvar = 'href="https://plancke.io/hypixel/player/stats/' + jd.players[i].name + '';
+                            var linkvar = 'href="https://plancke.io/hypixel/player/stats/' + player.name + '';
                         }
 
-                        if (jd.players[i].sub == true) {
-                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.players[i].name + '</a></p>');
+                        if (player.sub) {
+                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + player.name + '</a></p>');
                         } else {
-                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + jd.players[i].name + '</a></p>');
+                            $('#contestants').append('<a ' + linkvar + '"><img src="' + image + '" class="imagewithradius contestant"></a><p class="borderr specspage opentag">' + namevar + '<br><br><a ' + linkvar + '" class="housingurl overflow">' + player.name + '</a></p>');
                         }
                     })
                 };
