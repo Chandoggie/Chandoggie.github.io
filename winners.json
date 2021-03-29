@@ -175,6 +175,28 @@
             "teamname2": "Chika Fan Club",
             "name2": {"ign1" : "Piraten100", "ign2" : "Bubross"},
             "picid2": {"uuid1" : "9e8a38e6578648759b6aa45e2cc956af", "uuid2" : "bcfeb206d4154168802e764dfe7bd2e0"}
+        },
+        {
+            "datetime": "Week 17 [Mar. 12th]",
+            "type": "team",
+            "link": "https://www.twitch.tv/videos/947115896",
+            "teamname1": "DuoChrono",
+            "name1": {"ign1" : "CallmeKaii", "ign2" : "Didi_Skywalker"},
+            "picid1": {"uuid1" : "4c7e4f7d7d6248ad81cba63d8d702808", "uuid2" : "f8a9e651e8544abd8fef5a02a75ac25a"},
+            "teamname2": " The Cake Eaters",
+            "name2": {"ign1" : "Ottxrs", "ign2" : "BobbyLikesCake"},
+            "picid2": {"uuid1" : "8476a55e254b45058388cf24e4c6811b", "uuid2" : "623d579ddf4d49219b6d7a5102b34fc9"}
+        },
+        {
+            "datetime": "Week 18 [Mar. 19th]",
+            "type": "team",
+            "link": "https://www.twitch.tv/videos/955726376",
+            "teamname1": "The Skyblockians",
+            "name1": {"ign1" : "ValgoMC", "ign2" : "Gamazations"},
+            "picid1": {"uuid1" : "5be2bf81015b45359c9ed8515fc30c94", "uuid2" : "ca45c135bb954b5e9fe9f1cc2b05a798"},
+            "teamname2": "Teh Ducks",
+            "name2": {"ign1" : "Chandoggie", "ign2" : "HamDatNoob"},
+            "picid2": {"uuid1" : "06777508a0144cbdaa3c179758b5e277", "uuid2" : "384b43effc7a444095046946bdaad045"}
         }
     ]
 }
