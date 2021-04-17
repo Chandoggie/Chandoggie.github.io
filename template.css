@@ -139,6 +139,34 @@ header {
     background-color: rgb(52, 208, 219);
 }
 
+/* TikTok Stuff */
+
+.tiktok {
+    height: 25px;
+    width: 205px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(105, 201, 208);
+}
+
+.tiktoktext {
+    color: rgb(245, 92, 87);
+    transition-duration: 0.3s;
+    width: 205px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.tiktoktext:hover {
+    color: white;
+    background-color: rgb(105, 201, 208);
+}
+
 /* Housing Stuff */
 
 .housingcomp {
