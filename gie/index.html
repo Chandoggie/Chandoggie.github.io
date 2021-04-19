@@ -26,6 +26,14 @@
     <meta name="twitter:creator" content="@chandoggie" />
     <meta property="og:url" content="https://chan.dog" />
     <meta name="theme-color" content="#34D0DB">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('https://discord.com/api/guilds/620495121950965760/widget.json', function(discordjd) {
+                $('#discount').prepend("Online Members: <b>" + discordjd.presence_count + "</b>");
+            });
+        });
+    </script>
 </head>
 <main>
     <header>
@@ -48,8 +56,12 @@
 
     <body>
         <br>
+        <div class="discordwidget heightauto" style="margin: auto">
+            <a href="/discord" class="discordtext borderr heightauto" style="font-size: 15px; padding-top: 5px;">Join The Discord! Click Here!<br><span name="discount" id="discount" style="padding-bottom: 5px;"></span><img src="/images/profiledis.png" class="borderr"></a>
+        </div>
+        <br>
         <div class="tiktok">
-            <a href="https://www.tiktok.com/@chandoggie" style="font-size: 18px" class="tiktoktext borderr">Check Out My TikTok</a>
+            <a href="https://www.tiktok.com/@chandoggie" style="font-size: 18px; margin: auto" class="tiktoktext borderr">Check Out My TikTok</a>
         </div>
         <br>
         <div class="computerspecs">
