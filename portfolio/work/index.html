@@ -15,149 +15,176 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Place your stylesheet here-->
-    <link href="/classcss.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <header style="padding-bottom: 175px;">
+        <nav class="shadow navbar navbar-light navbar-expand-md fixed-top" style="background: rgb(200, 200, 200);">
+            <a class="navbar-brand" href="/portfolio/">
+                <img src="/logo.svg" width="auto" height="110" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <nav class="shadow navbar navbar-light navbar-expand-md fixed-top" style="background: rgb(200, 200, 200);">
-        <a class="navbar-brand" href="#">
-            <img src="/images/logo.png" width="auto" height="100" class="d-inline-block align-top" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/portfolio/">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/portfolio/aboutme">About Me</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/portfolio/work">My Work<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/portfolio/contactme">Contact Me</a>
-                </li>
-            </ul>
-            <a href="https://github.com/Chandoggie/Chandoggie.github.io" style="color: dimgray">GRA-491 9/5/2021 (Source Code Here)</a>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/portfolio/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/portfolio/aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/portfolio/work">My Work<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/portfolio/contactme">Contact Me</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/Chandoggie/Chandoggie.github.io" style="color: dimgray">10/11/2021 (Source Code Here)</a>
+            </div>
+        </nav>
+    </header>
 
     <main role="main" class="container rounded">
-
-        <br><br><br><br><br><br>
-        <div class="card card-block rounded" style="color: white; background-color: black; text-align: center;">
+        <div class="card card-block" style="color: white; background-color: black; text-align: center; border-radius: 25px; margin-bottom: 25px;">
             <h4 class="card-title">PORTFOLIO</h4>
-            <p class="card-text">Check out the cards below to learn a little more about the work I've done!</p>
-        </div><!-- stuff here -->
-        <div class="card-group rounded mt-1">
-            <div class="card" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/headphones.gif" style="height: 200px; overflow: hidden; object-fit: cover;">
+            <p class="card-text">Check out the cards below to learn a little more about the work I've done! Hold CTRL and scroll to zoom in and out / click to open the pdf!</p>
+        </div>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-pb.pdf#toolbar=0&navpanes=0&zoom=50" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-pb.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">My personal branding package, containing a business card, letterhead, envelope, and leave-behind piece!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-pb-stream.pdf#toolbar=0&navpanes=0&zoom=30" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-pb-stream.pdf#toolbar=0&navpanes=0&zoom=30" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A stream package made using commissioned assets! A notable inclusion is the sticker sheets, which I did the cut lines for.</div>
+            </a>
+        </div>
+        <br>
+        
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-faze.pdf#toolbar=0&navpanes=0&zoom=50" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-faze.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A mockup Instagram collage for Alanta Faze and their win at the Call of Duty League Final 2021!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-town.pdf#toolbar=0&navpanes=0&zoom=50" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-town.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A small branding package for TOWN, an Asian inspired restaurant!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-minecraft.pdf#toolbar=0&navpanes=0&zoom=65" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-minecraft.pdf#toolbar=0&navpanes=0&zoom=65" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A collection of Minecraft related thumbnails I've created for my Twitch and Youtube channels!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-gkp.pdf#toolbar=0&navpanes=0&zoom=30" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-gkp.pdf#toolbar=0&navpanes=0&zoom=30" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A tour poster for the band Good Kid!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-mh.pdf#toolbar=0&navpanes=0&zoom=30" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-mh.pdf#toolbar=0&navpanes=0&zoom=30" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">Three character posters from the Netflix TV show Money Heist!</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-lil.pdf#toolbar=0&navpanes=0&zoom=50" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-lil.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">A branding package for a fictional business, Lil' Guppies Scuba School! This includes a business card, letterhead, and envelope.</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <embed src="/portfolio/pdfs/portfolio-asd.pdf#toolbar=0&navpanes=0&zoom=50" type="application/pdf" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: 400px; overflow: hidden; object-fit: cover; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-asd.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">An original design utilizing existing assets for Artifical Space Designs.</div>
+            </a>
+        </div>
+        <br>
+
+        <div style="box-shadow: 0 0 25px 6px #CCCCCC; border-radius: 25px;">
+            <img src="/portfolio/pdfs/grawebbanner.gif" class="img-fluid w-100 shadow" style="border-top-left-radius: 25px; border-top-right-radius: 25px; height: auto; overflow: hidden; object-fit: contain; object-position: 100% 70%;">
+            <a href="/portfolio/pdfs/portfolio-town.pdf#toolbar=0&navpanes=0&zoom=50" style="text-decoration: none;">
+                <div class="shadow p-3 rounded-bottom container" style="background-color: black; color: white; font-weight: 500px; text-align: center;">An animated advertisement for Amethyst Bay Resort &amp; Spa!</div>
+            </a>
+        </div>
+        <br>
+
+        <br>
+        <div class="card card-block" style="color: white; background-color: black; text-align: center; border-radius: 25px;">
+            <h4 class="card-title">Personal Portfolio Projects</h4>
+            <p class="card-text">Here are a few personal projects I think show off my abilities that I've done in my free time!</p>
+        </div>
+        <br>
+        <div class="card-group mt-1">
+            <div class="card" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/headphones.gif" style="height: 200px; overflow: hidden; object-fit: cover; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
                     <h4 class="card-title p-1">3D Modeling Practice!</h4>
                     <p class="card-text p-1" style="color: white; background: black;">Worked on this during my first 3D modeling course!</p>
                 </div>
             </div>
-            <div class="card mr-1 ml-1 rounded" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/tent.jpg" style="height: 200px; overflow: hidden; object-fit: cover;">
+            <div class="card mr-1 ml-1" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/badlion.png" style="height: 200px; object-fit: contain; overflow: hidden; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
-                    <h4 class="card-title p-1">TOWN Project</h4>
-                    <p class="card-text p-1" style="color: white; background: black;">During my first few Graphic Design courses, I worked on these TOWN restaurant materials. Table tents, trifolds, and menus!</p>
+                    <h4 class="card-title p-1">Badlion Branding</h4>
+                    <p class="card-text p-1" style="color: white; background: black;">As a Community Manager for Badlion, I created multiple different layouts for streaming along with three video animations. A <a href="https://youtu.be/5oB158wA5vg">Transition</a>, A <a href="https://youtu.be/j54r2eOwq7w">TikTok Idle</a>, and a <a href="https://youtu.be/Djzc_nnkdJQ">Desktop Idle</a>. (Click the links for videos)</p>
                 </div>
             </div>
-            <div class="card rounded" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/sdscreensaver.gif" style="height: 200px; overflow: hidden; object-fit: cover;">
+            <div class="card" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/sdscreensaver.gif" style="height: 200px; overflow: hidden; object-fit: cover; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
                     <h4 class="card-title p-1">Lots of personal projects!</h4>
                     <p class="card-text p-1" style="color: white; background: black;">I've worked on tons of personal projects over the years! This includes things like overlays, icons, animated pixel art, etc!</p>
                 </div>
             </div>
         </div>
-        <div class="card-group rounded mt-1">
-            <div class="card" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/overlay.png" style="height: auto; overflow: hidden; object-fit: contain;">
+        <div class="card-group mt-1">
+            <div class="card" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/overlay.png" style="height: auto; overflow: hidden; object-fit: contain; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
                     <h4 class="card-title p-1">Overlays</h4>
                     <p class="card-text p-1" style="color: white; background: black;">I've made a few overlays for my streams!</p>
                 </div>
             </div>
-            <div class="card mr-1 ml-1 rounded" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/gratexturing.png" style="height: auto; overflow: hidden; object-fit: contain">
+            <div class="card mr-1 ml-1" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/gratexturing.png" style="height: auto; overflow: hidden; object-fit: contain; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
                     <h4 class="card-title p-1">3D Texturing</h4>
                     <p class="card-text p-1" style="color: white; background: black;">A class project to texture a prop, I chose an axe.</p>
                 </div>
             </div>
-            <div class="card rounded" style="color: white; background: black;">
-                <img class="card-img-top rounded" src="/images/overlaysub.gif" style="height: auto; overflow: hidden; object-fit: contain;">
+            <div class="card" style="color: white; background: transparent; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <img class="card-img-top" src="/images/overlaysub.gif" style="height: auto; overflow: hidden; object-fit: contain; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="card-block" style="color: white; background: black;">
                     <h4 class="card-title p-1">Basic Video Editing &amp; Integration</h4>
                     <p class="card-text p-1" style="color: white; background: black;">I've worked with chroma keys and also video editing to make overlays for my streams!</p>
                 </div>
             </div>
         </div>
-
-        <br>
-        <div class="card card-block rounded" style="color: white; background-color: black; text-align: center;">
-            <a href="/gra420_brand_package.pdf">
-                <h4 class="card-title">PERSONAL BRANDING PACKAGE</h4>
-                <p class="card-text">Click here to see my personal branding package.</p>
-            </a>
-        </div>
-        <br>
-
-        <footer class="page-footer font-small blue pt-4 fixed-bottom" style="background: #1EC2F3; color: black;">
-            <div class="container-fluid text-center text-md-left">
-                <div class="row">
-                    <div class="col-md-6 mt-md-0 mt-3">
-                        <h5 class="text-uppercase">Thanks for visiting!</h5>
-                        <p>I hope you enjoyed learning more about me! Feel free to reach out to me using the media listed!</p>
-                    </div>
-                    <hr class="clearfix w-100 d-md-none pb-3">
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase" style="color: black">Contact Me:</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="https://twitter.com/chandoggie" style="color: black">Check out my Twitter</a>
-                            </li>
-                            <li>
-                                <a href="https://hypixel.net/forums/" style="color: black">Check out my Hypixel Forums Account</a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/chandler-cooper-484965214/" style="color: black">Check out my LinkedIn</a>
-                            </li>
-                            <li>
-                                <a href="https://www.behance.net/Chandoggie" style="color: black">Check out my Behance</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <hr class="clearfix w-100 d-md-none pb-3">
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase">Sitemap</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="/portfolio/" style="color: black">Home</a>
-                            </li>
-                            <li>
-                                <a href="/portfolio/aboutme/" style="color: black">About Me</a>
-                            </li>
-                            <li>
-                                <a href="/portfolio/work/" style="color: black">My Work</a>
-                            </li>
-                            <li>
-                                <a href="/portfolio/contactme/" style="color: black">Contact Me</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
     <!-- Bootstrap core JavaScript
