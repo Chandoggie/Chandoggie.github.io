@@ -20,43 +20,43 @@
     ],
     "players": [
         {
-            "name": "",
-            "uuid": "",
+            "name": "ValgoMC",
+            "uuid": "5be2bf81015b45359c9ed8515fc30c94",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
+            "name": "Didi_Skywalker",
+            "uuid": "f8a9e651e8544abd8fef5a02a75ac25a",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
+            "name": "Piraten100",
+            "uuid": "9e8a38e6578648759b6aa45e2cc956af",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
+            "name": "minerfun",
+            "uuid": "0bfff991e9cd4b32b2ebc7487151ee89",
+            "sub": true
+        },
+        {
+            "name": "Maple39",
+            "uuid": "8b3b5df54c674c2197ac7ffbb1b424b2",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
+            "name": "Gamazations",
+            "uuid": "ca45c135bb954b5e9fe9f1cc2b05a798",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
+            "name": "BobbyLikesCake",
+            "uuid": "623d579ddf4d49219b6d7a5102b34fc9",
             "sub": false
         },
         {
-            "name": "",
-            "uuid": "",
-            "sub": false
-        },
-        {
-            "name": "",
-            "uuid": "",
+            "name": "nullDorito",
+            "uuid": "a7b317669c3945a380cd96d1f516b858",
             "sub": false
         }
     ]

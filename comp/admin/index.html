@@ -30,13 +30,13 @@
     <script>
         $(document).ready(function() {
             $.getJSON('/contestants.json', function(jd) {
-                $.each(jd.names, function(i, f) {
+                $.each(jd.players, function(i, f) {
                     //alert(jd.names[i].uuid);
-                    if (jd.names[i].uuid == 0) {} else {
+                    if (jd.players[i].uuid == 0) {} else {
 
-                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=112&overlay" class="borderr">');
-                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=56&overlay" style="margin-left: 5px; margin-right: 5px;" class="borderr">');
-                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.names[i].uuid + '?size=28&overlay" class="borderr">');
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.players[i].uuid + '?size=112&overlay" class="borderr">');
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.players[i].uuid + '?size=56&overlay" style="margin-left: 5px; margin-right: 5px;" class="borderr">');
+                        $('#adminfaces').append('<img src="https://crafatar.com/avatars/' + jd.players[i].uuid + '?size=28&overlay" class="borderr">');
                     }
                 });
             });
