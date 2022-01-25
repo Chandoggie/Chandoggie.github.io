@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <title>Apply for Chan's Building Contest</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/template.css">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Chan's Building Contest">
+    <meta name="keywords" content="minecraft, chandoggie, hypixel">
+    <meta name="author" content="Chandoggie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Chan's Building Contest" />
+    <meta property="og:description" content="Apply for Chan's Housing Building Contests!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.imgur.com/fxEpRBs.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@chandoggie" />
+    <meta name="twitter:creator" content="@chandoggie" />
+    <meta property="og:url" content="https://chan.dog/apply" />
+    <meta name="theme-color" content="#A800A8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('/nextcontest.json', function(ncjd) {
+                $('#nextcontest').prepend(ncjd.next);
+            });
+            $.getJSON('https://discord.com/api/guilds/620495121950965760/widget.json', function(discordjd) {
+                $('#discount').prepend("<b>Online Members: " + discordjd.presence_count + "</b>");
+            });
+        });
+    </script>
+</head>
+<main>
+
+    <body>
+        <div style="width: 458px; height: auto; margin: auto; padding-top: 10px;">
+            <!-- Build Comp Explanation -->
+
+            <!-- Applications Info -->
+            <div name="apply" id="apply" style="margin: auto; width: 444px;" class="heightauto contestheaderdiv">
+                <p style="width: 444px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">How To Apply for Chan's Build Comp:</span>
+                <p style="width: 434px; margin-top: 5px; padding: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to participate in the contest, you can apply in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="/discord" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
+            </div><br>
+            <!-- Twitch Widget -->
+            <div class="twitchwidget" style="float: right;">
+                <a href="https://twitch.tv/Chandoggie" class="twitchtext borderr" style="font-size: 15px;"><b>Watch The Competition!<br> Live at Twitch.tv/Chandoggie</b><img src="/images/profiletwi.png" class="borderr"></a>
+            </div>
+            
+            <!-- Discord Widget -->
+            <div class="discordwidget heightauto" style="float: left;">
+                <a href="/discord" class="mixtext borderr" style="font-size: 15px;"><b>Join The Discord! Click Here!</b><br><span name="discount" id="discount" style="padding-bottom: 5px;"></span><img src="/images/profiledis.png" class="borderr"></a>
+            </div>
+        </div>
+    </body>
+</main></html>
