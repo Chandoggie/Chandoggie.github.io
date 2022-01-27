@@ -36,6 +36,11 @@
                 $('#discount').prepend("<b>Online Members: " + discordjd.presence_count + "</b>");
             });
         });
+        $(document).ready(function() {
+            $.getJSON('/winners.json', function(win) {
+                $('#prevlink').prepend("<a href='" + win.winners[0].link + "' class='colorgold'>" + win.winners[0].link + "</a>");
+            });
+        });
     </script>
 </head>
 <main>
@@ -45,6 +50,10 @@
             <!-- Build Comp Explanation -->
 
             <!-- Applications Info -->
+            <div name="apply" id="apply" style="margin: auto; width: 444px;" class="heightauto contestheaderdiv">
+                <p style="width: 444px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">What is Chan's Build Comp?</span>
+                <p style="width: 434px; margin-top: 5px; padding: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><img src="/images/buildlogo.png" style="width: 434px; height: auto"><br>A great explanation can be found here: <br><a href="https://hypixel.net/threads/3878921" class="colorgold">https://hypixel.net/threads/3878921</a><br><br>Competition resources can be found here: <br><a href="/comp/" class="colorgold">https://chan.dog/comp</a><br><br>The previous competition can be found here: <span id="prevlink" name="prevlink"></span><br></p>
+            </div><br>
             <div name="apply" id="apply" style="margin: auto; width: 444px;" class="heightauto contestheaderdiv">
                 <p style="width: 444px; padding-bottom: 5px; padding-top: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr"><span class="headerhousing">How To Apply for Chan's Build Comp:</span>
                 <p style="width: 434px; margin-top: 5px; padding: 5px; float: left; height: auto; font-size: 16px;" class="comptext borderr">If you'd like to participate in the contest, you can apply in the '<span class="babybluebox colorbabyblue">#building-contest</span>' channel of my <a href="/discord" class="colorbabyblue">Discord</a>!<br><br>The opening of applications will be announced Wednesday/Thursday before the event to give ample time to apply!<br><br>The event lasts upwards of 2 hours starting at 7PM EST. So please only apply if you have the time allotted.<br><br>Furthermore, any and all abuse will result in a ban from both my stream &amp; housing plot.<br><br>Lastly, the previous top three builders will need to wait a week before reapplying.</p>
