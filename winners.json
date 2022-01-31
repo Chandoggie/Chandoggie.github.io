@@ -10,6 +10,17 @@
             "seconduuid": "f8a9e651e8544abd8fef5a02a75ac25a",
             "third": "BobbyLikesCake",
             "thirduuid": "623d579ddf4d49219b6d7a5102b34fc9"
+        },
+        {
+            "datetime": "Week 2 [Jan 28th]",
+            "type": "solo",
+            "link": "https://www.twitch.tv/videos/1279368741",
+            "first": "Piraten100",
+            "firstuuid": "9e8a38e6578648759b6aa45e2cc956af",
+            "second": "Dedicational",
+            "seconduuid": "7b724ea3991647559e9db925499fef89",
+            "third": "Maple39",
+            "thirduuid": "8b3b5df54c674c2197ac7ffbb1b424b2"
         }
     ]
 }
