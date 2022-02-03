@@ -38,7 +38,7 @@
         });
         $(document).ready(function() {
             $.getJSON('/winners.json', function(win) {
-                $('#prevlink').prepend("<a href='" + win.winners[0].link + "' class='colorgold'>" + win.winners[0].link + "</a>");
+                $('#prevlink').prepend("<a href='" + win.winners[win.winners.length - 1].link + "' class='colorgold'>" + win.winners[0].link + "</a>");
             });
         });
     </script>
