@@ -1,0 +1,27 @@
+{
+	"stats": {
+		"players": [
+			{	"name": "Chandoggie",
+				"uuid": "06777508a0144cbdaa3c179758b5e277",
+				"gamesplayed": "1",
+				"wins": "2",
+				"losses": "3",
+				"scores": "4"
+			},
+			{	"name": "ZakGotMC",
+				"uuid": "ff5ea368071940cfb975d3b7f0051ff7",
+				"gamesplayed": "5",
+				"wins": "6",
+				"losses": "7",
+				"scores": "8"
+			},
+			{	"name": "Orange",
+				"uuid": "4d9c7456dba747f4b42c6ef0ca2a06bb",
+				"gamesplayed": "9",
+				"wins": "10",
+				"losses": "11",
+				"scores": "12"
+			}
+		]
+	}
+}

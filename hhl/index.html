@@ -1,34 +1,55 @@
 <!DOCTYPE HTML>
 
-<html lang="en">
+<html lang="en" style="background-image: url(/images/icebackground.png); height: auto; width: auto">
 
 <head>
-    <title>Hypixel Hockey League!</title>
+	<title>Hypixel Hockey League!</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/template.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/template.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Hypixel Hockey League!">
-    <meta name="keywords" content="minecraft, chandoggie, hypixel, twitch">
-    <meta name="author" content="Chandoggie">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="description" content="Hypixel Hockey League!">
+	<meta name="keywords" content="minecraft, chandoggie, hypixel, twitch">
+	<meta name="author" content="Chandoggie">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Download The Latest HHL Texture Pack!" />
-    <meta property="og:description" content="Check out the HHL! A Hockey Game created for Hypixel Housing! Download the Texture Pack and play today!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.imgur.com/TfRJwTP.png" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
+	<meta property="og:title" content="Download The Latest HHL Texture Pack!" />
+	<meta property="og:description" content="Check out the HHL! A Hockey Game created for Hypixel Housing! Download the Texture Pack and play today!" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://i.imgur.com/TfRJwTP.png" />
+	<meta property="og:image:width" content="192" />
+	<meta property="og:image:height" content="192" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@chandoggie" />
-    <meta name="twitter:creator" content="@chandoggie" />
-    <meta property="og:url" content="https://chan.dog/hhl" />
-    <meta name="theme-color" content="#F5BE46">
-    <meta http-equiv="refresh" content="0; URL= https://chan.dog/discord" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@chandoggie" />
+	<meta name="twitter:creator" content="@chandoggie" />
+	<meta property="og:url" content="https://chan.dog/hhl" />
+	<meta name="theme-color" content="#F5BE46">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$.getJSON('/hhlplayerstats.json', function(hhl) {
+				$.each(hhl.stats.players, function(i, f) {
+					$('#title').append('<b style="padding-top: 0px; padding-bottom: 8px;"><u>' + hhl.stats.players[i].name + '<br></u></b><b style="padding-top: 0px;">Games Played: ' + hhl.stats.players[i].gamesplayed + ' // Scores: ' + hhl.stats.players[i].scores +'</b><br><b style="padding-top: 0px;">Wins: ' + hhl.stats.players[i].wins + ' // Losses: ' + hhl.stats.players[i].losses + '</b><br><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=200&overlay" style="border-radius: 7px; margin-left: auto; margin-right: auto; display: block;"><br>');
+				});
+			});
+
+		});
+	</script>
 
 </head>
-    <iframe width="1" height="1" frameborder="0" src="/downloads/HypixelHockeyLeague%20PR3.zip"></iframe>
-    <a href="/downloads/HypixelHockeyLeague%20PR2.zip">Didn't automatically download? Click here to download!</a>
-</html>
+
+<body style="font-family: Bakbak One;">
+	<img src="/images/hhl_logo.png" ; style="margin-left: auto; margin-right: auto; display: block; height: 400px; width: 400px; filter: drop-shadow(3px 3px 5px #222); margin: auto;">
+	<h1 style="margin-top: 0px; margin-bottom: 10px; color: #F1C048; text-align: center; filter: drop-shadow(2px 2px 1rem #222); font-size: 33px;">HYPIXEL HOCKEY LEAGUE</h1>
+	<h1 style="margin-top: 0px; color: #F1C048; text-align: center; filter: drop-shadow(2px 2px 1rem #222); font-size: 33px;" name="title" id="title"></h1>
+</body></html>
