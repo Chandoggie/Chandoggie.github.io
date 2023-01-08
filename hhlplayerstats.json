@@ -3,24 +3,39 @@
 		"players": [
 			{	"name": "Chandoggie",
 				"uuid": "06777508a0144cbdaa3c179758b5e277",
-				"gamesplayed": "1",
-				"wins": "2",
-				"losses": "3",
-				"scores": "4"
+			 	"isref": true,
+			 	"issupporter": true,
+				"gamesplayed": "10",
+				"wins": "9",
+				"losses": "1",
+				"scores": "32"
 			},
-			{	"name": "ZakGotMC",
+			{	"name": "ZakGotMc",
 				"uuid": "ff5ea368071940cfb975d3b7f0051ff7",
-				"gamesplayed": "5",
-				"wins": "6",
-				"losses": "7",
-				"scores": "8"
+			 	"isref": true,
+			 	"issupporter": true,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
 			},
-			{	"name": "Orange",
-				"uuid": "4d9c7456dba747f4b42c6ef0ca2a06bb",
-				"gamesplayed": "9",
-				"wins": "10",
-				"losses": "11",
-				"scores": "12"
+			{	"name": "Softees",
+				"uuid": "f4d1b18870d446b7bf415d947a37a939",
+			 	"isref": false,
+			 	"issupporter": true,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
+			},
+			{	"name": "zacha6",
+				"uuid": "2511f1906106473ca78db003ba743e00",
+			 	"isref": false,
+			 	"issupporter": false,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
 			}
 		]
 	}
