@@ -45,6 +45,15 @@
 				"wins": "0",
 				"losses": "0",
 				"scores": "0"
+			},
+			{	"name": "wrisx",
+				"uuid": "aa2204d1433d403f93956ec47d4ba647",
+			 	"isref": false,
+			 	"issupporter": false,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
 			}
 		]
 	}
