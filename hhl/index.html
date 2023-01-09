@@ -6,7 +6,7 @@
 	<title>Hypixel Hockey League!</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="/template.css">
+	<link rel="stylesheet" type="text/css" href="/hhl.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
@@ -33,33 +33,29 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function() {
-
 			$.getJSON('/hhlplayerstats.json', function(hhl) {
 				$.each(hhl.stats.players, function(i) {
-					if (hhl.stats.players[i].isref == true) {
-						$('#title').append('<div style="text-align: center; height: 150px; width: 550px; background: rgb(0 0 0 / .5); border-radius: 25px; margin: auto; margin-bottom: 25px;"><img src="/images/ref_icon.png" title="Certified HHL REF" style="margin: auto; float: right; padding-right: 7px; padding-top: 7px; padding-left: 511px; display: flex; position: absolute;"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" style="border-top-left-radius: 25px; border-bottom-left-radius: 25px; float: left; filter: drop-shadow(2px 2px 1rem #222);"><b style="color: #F5BE46; font-size: 30px; font-weight: 100; word-wrap: break-word; margin: auto;"><u>' + hhl.stats.players[i].name + '</u></b><br><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
+					if (hhl.stats.players[i].isref == true && hhl.stats.players[i].issupporter == true) {
+						$('#title').append('<div class="tilediv"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" class="tilefaceimage"><img src="/images/ref_icon.png" title="Certified HHL REF" class="tilerightsidebadge"><img src="/images/supporter.png" title="Generous HHL Supporter" class="tileleftsidebadge"><b class="tilename"><u>' + hhl.stats.players[i].name + '</u></b><br><b class="tileb">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b class="tileb">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
+					} else if (hhl.stats.players[i].isref == true) {
+						$('#title').append('<div class="tilediv"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" class="tilefaceimage"><img src="/images/ref_icon.png" title="Certified HHL REF" class="tilerightsidebadge"><b class="tilename"><u>' + hhl.stats.players[i].name + '</u></b><br><b class="tileb">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b class="tileb">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
 					} else if (hhl.stats.players[i].issupporter == true) {
-						$('#title').append('<div style="text-align: center; height: 150px; width: 550px; background: rgb(0 0 0 / .5); border-radius: 25px; margin: auto; margin-bottom: 25px;"><img src="/images/supporter.png" title="Generous HHL Supporter" style="margin: auto; float: right; padding-right: 7px; padding-top: 7px; padding-left: 511px; display: flex; position: absolute;"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" style="border-top-left-radius: 25px; border-bottom-left-radius: 25px; float: left; filter: drop-shadow(2px 2px 1rem #222);"><b style="color: #F5BE46; font-size: 30px; font-weight: 100; word-wrap: break-word; margin: auto;"><u>' + hhl.stats.players[i].name + '</u></b><br><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');	   
+						$('#title').append('<div class="tilediv"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" class="tilefaceimage"><img src="/images/supporter.png" title="Generous HHL Supporter" class="tilerightsidebadge"><b class="tilename"><u>' + hhl.stats.players[i].name + '</u></b><br><b class="tileb">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b class="tileb">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
 					} else {
-						$('#title').append('<div style="text-align: center; height: 150px; width: 550px; background: rgb(0 0 0 / .5); border-radius: 25px; margin: auto; margin-bottom: 25px;"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" style="border-top-left-radius: 25px; border-bottom-left-radius: 25px; float: left; filter: drop-shadow(2px 2px 1rem #222);"><b style="color: #F5BE46; font-size: 30px; font-weight: 100; word-wrap: break-word; margin: auto;"><u>' + hhl.stats.players[i].name + '</u></b><br><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b style="margin: auto; color: #F5BE46; font-size: 20px; font-weight: 100; padding-top: 15px; display: block;">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
+						$('#title').append('<div class="tilediv"><img src="https://crafatar.com/avatars/' + hhl.stats.players[i].uuid + '?size=150&overlay" class="tilefaceimage"><b class="tilename"><u>' + hhl.stats.players[i].name + '</u></b><br><b class="tileb">GAMES PLAYED: ' + hhl.stats.players[i].gamesplayed + ' // SCORES: ' + hhl.stats.players[i].scores + '</b><b class="tileb">WINS: ' + hhl.stats.players[i].wins + ' // LOSSES: ' + hhl.stats.players[i].losses + '</b></div>');
 					}
 				});
 			});
-
 		});
 
-		//					var namearray = [];
-		//					hhl.stats.players.forEach(function(obj){
-		//						namearray.push(obj.name);
-		//					});
-		//					if (hhl.stats.players[]) {
-		//						$('#title').prepend('<b>TESTING</b><br>');
-		//					} else {
-		//						
-		//					}
+//				var namearray = [];
+//				hhl.stats.players.forEach(function(obj, i) {
+//					namearray.push(obj.name + '_' + i);
+//				});
+//				alert(namearray);
 	</script>
 
 </head>
@@ -67,5 +63,5 @@
 <body style="font-family: Bakbak One;">
 	<img src="/images/hhl_logo.png" ; style="margin-left: auto; margin-right: auto; display: block; height: 400px; width: 400px; filter: drop-shadow(3px 3px 5px #222); margin: auto;">
 	<h1 style="margin-top: 0px; margin-bottom: 10px; color: #F1C048; text-align: center; filter: drop-shadow(2px 2px 1rem #222); font-size: 33px;">HYPIXEL HOCKEY LEAGUE<br>PLAYER STATS:</h1>
-	<h1 style="margin-top: 0px; color: #F5BE46;" name="title" id="title"></h1>
+	<div style="margin-top: 0px; color: #F5BE46;" name="title" id="title"></div>
 </body></html>

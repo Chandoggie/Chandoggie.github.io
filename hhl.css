@@ -1,0 +1,53 @@
+.tilediv {
+	text-align: center;
+	height: 150px;
+	width: 550px;
+	background: rgb(0 0 0 / .5);
+	border-radius: 25px;
+	margin: auto;
+	margin-bottom: 25px;
+}
+
+.tilefaceimage {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	float: left;
+	filter: drop-shadow(2px 2px 1rem #222);
+}
+
+.tilerightsidebadge {
+	margin: auto;
+	float: right;
+	padding-right: 7px;
+	padding-top: 7px;
+	padding-left: 511px;
+	display: flex;
+	position: absolute;
+}
+
+.tileleftsidebadge {
+	margin: auto;
+	float: right;
+	padding-right: 7px;
+	padding-top: 7px;
+	padding-left: 472px;
+	display: flex;
+	position: absolute;
+}
+
+.tilename {
+	color: #F5BE46;
+	font-size: 30px;
+	font-weight: 100;
+	word-wrap: break-word;
+	margin: auto;
+}
+
+.tileb {
+	margin: auto;
+	color: #F5BE46;
+	font-size: 20px;
+	font-weight: 100;
+	padding-top: 15px;
+	display: block;
+}
