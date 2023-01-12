@@ -54,6 +54,15 @@
 				"wins": "0",
 				"losses": "0",
 				"scores": "0"
+			},
+			{	"name": "minerfun",
+				"uuid": "0bfff991e9cd4b32b2ebc7487151ee89",
+			 	"isref": false,
+			 	"issupporter": false,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
 			}
 		]
 	}
