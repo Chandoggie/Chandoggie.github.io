@@ -9,8 +9,7 @@
 }
 
 .tilefaceimage {
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
+	border-radius: 25px;
 	float: left;
 	filter: drop-shadow(2px 2px 1rem #222);
 }

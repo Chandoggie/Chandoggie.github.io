@@ -19,6 +19,15 @@
 				"losses": "0",
 				"scores": "0"
 			},
+			{	"name": "Mirtual",
+				"uuid": "5936c02a2e784829b4fea2bef1e3d9e2",
+			 	"isref": true,
+			 	"issupporter": false,
+				"gamesplayed": "0",
+				"wins": "0",
+				"losses": "0",
+				"scores": "0"
+			},
 			{	"name": "Softees",
 				"uuid": "f4d1b18870d446b7bf415d947a37a939",
 			 	"isref": false,
