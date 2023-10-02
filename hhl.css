@@ -50,3 +50,9 @@
 	padding-top: 15px;
 	display: block;
 }
+
+.errorclass {
+	image-rendering: pixelated; 
+	height: auto;
+	width: 22px;
+}
